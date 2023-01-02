@@ -32,7 +32,7 @@ torch.backends.cudnn.benchmark = False		# NR: True is a bit faster, but can lead
 
 from torch_optimizer import DiffGrad, AdamP, RAdam
 
-from CLIP import clip
+import clip
 import kornia.augmentation as K
 import numpy as np
 import imageio
@@ -113,7 +113,7 @@ if args.prompts:
     # For stories, there will be many phrases
     story_phrases = [phrase.strip() for phrase in args.prompts.split("^")]
 
-    # Make a list of all phrases
+    # Make a list of all phrasesc
     all_phrases = []
     for phrase in story_phrases:
         all_phrases.append(phrase.split("|"))
